@@ -1,6 +1,7 @@
-FROM ubuntu:14.04
-MAINTAINER James Turnbull "james@example.com"
-ENV REFRESHED_AT 2014-06-01
+FROM ubuntu:16.04
+MAINTAINER James Turnbull "shenguanghui@tsinghuanet.com"
+ENV REFRESHED_AT 2018-05-10
 RUN apt-get update
-RUN apt-get -y install ruby rake
-RUN gem install --no-rdoc --no-ri rspec ci_reporter_rspec
+RUN apt-get install -y nginx
+RUN echo 'Hi, shenguanghui' > /usr/share/nginx/html/index.html
+EXPOSE 80
